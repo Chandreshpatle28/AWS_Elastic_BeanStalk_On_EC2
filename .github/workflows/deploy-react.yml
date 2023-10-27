@@ -5,8 +5,6 @@ on :
             - "main"
 jobs:
     deploy: 
-        artifact: deployment_package
-        use_existing_version_if_available: true
         runs-on: ubuntu-latest
         steps:
         - name: Checkout source code
@@ -26,3 +24,5 @@ jobs:
             existing_bucket_name: elasticbeanstalk-us-east-1-130407889756
             region: us-east-1
             deployment_package: deploy.zip
+            artifact: deployment_package
+            use_existing_version_if_available: true
