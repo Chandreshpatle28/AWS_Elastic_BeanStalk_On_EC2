@@ -5,8 +5,6 @@ on :
             - "main"
 jobs:
     deploy: 
-        artifact: deployment_package
-        use_existing_version_if_available: true
         runs-on: ubuntu-latest
         steps:
         - name: Checkout source code
@@ -22,7 +20,7 @@ jobs:
             aws_secret_key: ${{ secrets.AWS_ADMIN_SECRET_ACCESS_KEY_ID }}
             application_name: React-app
             environment_name: React-app-env
-            version_label: ${{ github.sha }}
+            version_label: d81093ed0e5322d2d6a7abb32c7c3f410e135247
             existing_bucket_name: elasticbeanstalk-us-east-1-130407889756
             region: us-east-1
-            deployment_package: deploy.zip
+            #deployment_package: deploy.zip 
