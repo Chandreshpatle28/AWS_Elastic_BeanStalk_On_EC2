@@ -20,8 +20,7 @@ jobs:
             aws_secret_key: ${{ secrets.AWS_ADMIN_SECRET_ACCESS_KEY_ID }}
             application_name: React-app
             environment_name: React-app-env
-            version_label: d81093ed0e5322d2d6a7abb32c7c3f410e135247
+            version_label: ${{ github.sha }}
             existing_bucket_name: elasticbeanstalk-us-east-1-130407889756
             region: us-east-1
-            use_existing_version_if_available: true
-            #deployment_package: deploy.zip 
+            deployment_package: deploy.zip
