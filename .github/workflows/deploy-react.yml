@@ -5,6 +5,8 @@ on :
             - "main"
 jobs:
     deploy: 
+        artifact: deployment_package
+        use_existing_version_if_available: true
         runs-on: ubuntu-latest
         steps:
         - name: Checkout source code
